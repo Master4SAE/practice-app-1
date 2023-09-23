@@ -1,32 +1,28 @@
 import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-//import { Colors } from 'react-native/Libraries/NewAppScreen';
-import ListItem from './components/ListItem';
 import Header from './components/Header';
-import {uuid} from 'uuidv4';
+import ListItem from './components/ListItem';
+import uuid from 'react-native-uuid';
+
 
 const App = ()=> {
-  const [items, setItem] = useState([
-    {id:uuid(), text: 'Milk'},
-    {id:uuid(), text: 'Potatos'},
-    {id:uuid(), text: 'Carrots'},
-    {id:uuid(), text: 'Breads'}
-  
+  const [items, setItems] = useState([
+    {id: uuid.v4(), text: 'Milk'},
+    {id: uuid.v4(), text: 'Eggs'},
+    {id: uuid.v4(), text: 'Bread'},
+    {id: uuid.v4(), text: 'Carrots'},
   ]);
 
   return(
-
     <View style={styles.container}>
        <Header/>
-
-       <FlatList
-        data ={items} 
-        renderItem={({item}) => 
-        <ListItem item={item}/>}
+       <FlatList 
+       data={items} 
+       renderItem={({item}) => 
+       <ListItem item={item} />}
        />
     </View>
-
   );
 };
 
@@ -35,7 +31,6 @@ const styles = StyleSheet.create({
     flex:1,
     paddingTop: 60,
   },
-
 });
 
 export default App;

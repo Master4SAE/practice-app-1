@@ -9,7 +9,7 @@ const Header = ({title})=> {
     );
   };
   Header.defaultProps = {
-    title:'Shopping List'
+    title:'Shopping List',
   }
   
   const styles = StyleSheet.create({

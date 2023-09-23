@@ -7,14 +7,11 @@ const ListItem = ({item}) => {
       <TouchableOpacity style={styles.listItem}>
         <View style={styles.listItemView}>
 
-            <Text style={styles.listItemText}>
-                {item.text}
-
-            </Text>
-            <Icon name='remove' size={20} color='firebrick'/>
+        <Text style={styles.listItemText}>{item.text}</Text>
+        <Icon name="remove" size={20} color="firebrick"/>
 
         </View>
-
+        
       </TouchableOpacity>
     );
   };
