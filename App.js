@@ -1,14 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { FlatList, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+//import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Header from './components/Header';
+import {uuid} from 'uuidv4';
 
-const App =()=> {
-  return (
-    <View>
-      <Text>hello</Text>
+const App = ()=> {
+  const [items, setItem] = useState([
+    {id:uuid(), text: 'Milk'},
+    {id:uuid(), text: 'Potatos'},
+    {id:uuid(), text: 'Carrots'},
+    {id:uuid(), text: 'Breads'}
+  
+  ]);
+
+  return(
+    <View style={styles.container}>
+       <Header/>
+
+       <FlatList/>
     </View>
-  )
-}
+  );
+};
+
+const styles = StyleSheet.create({
+  container : {
+    flex:1,
+    paddingTop: 60,
+  },
+
+});
+
+export default App;
+
 
 
 
