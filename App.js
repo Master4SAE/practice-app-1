@@ -20,7 +20,10 @@ const App = ()=> {
     <View style={styles.container}>
        <Header/>
 
-       <FlatList data ={items} renderItem={({item}) => <ListItem item={item}/>}
+       <FlatList
+        data ={items} 
+        renderItem={({item}) => 
+        <ListItem item={item}/>}
        />
     </View>
 

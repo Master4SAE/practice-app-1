@@ -11,6 +11,7 @@ const ListItem = ({item}) => {
                 {item.text}
 
             </Text>
+            <Icon name='remove' size={20} color='firebrick'/>
 
         </View>
 
@@ -31,6 +32,10 @@ const ListItem = ({item}) => {
         justifyContent: 'space-between',
         alignItems:'center',
     },
+    listItemText: {
+        fontSize:18,
+        
+    }
    
   
   });
