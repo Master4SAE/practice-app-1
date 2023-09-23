@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 //import { Colors } from 'react-native/Libraries/NewAppScreen';
+import ListItem from './components/ListItem';
 import Header from './components/Header';
 import {uuid} from 'uuidv4';
 
@@ -15,11 +16,14 @@ const App = ()=> {
   ]);
 
   return(
+
     <View style={styles.container}>
        <Header/>
 
-       <FlatList/>
+       <FlatList data ={items} renderItem={({item}) => <ListItem item={item}/>}
+       />
     </View>
+
   );
 };
 
