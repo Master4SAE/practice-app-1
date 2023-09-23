@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5e191ed0-505d-4b1e-9b1b-a448da1fcc75"
+      }
+    },
+    "owner": "ebrahimi_sohaib"
   }
 }
